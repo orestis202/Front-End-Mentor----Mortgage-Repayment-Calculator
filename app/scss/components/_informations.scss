@@ -1,0 +1,104 @@
+@use 'util' as *;
+.information{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    gap: 1rem;
+    &__title{
+        align-self: start;
+    }
+    &__clearBtn{
+        border: none;
+        background-color: var(--white);
+        color: var(--clearBtn);
+        text-decoration: underline;
+        font-size: rem(16);
+    }
+
+}
+.mortgage{
+    display:flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 1rem;
+
+    &__label{
+        color:var(--text-label);
+        width: 100%;
+        height: 100%;
+    }
+    
+    &__div{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border: rem(1.5) solid var(--clearBtn);
+        border-radius: 0.3rem;
+        overflow: hidden;
+        margin-top: 0.5rem ;
+    }
+    &__icon{
+        background-color: var(--background);
+        padding: 0.5rem 1rem;
+        font-weight: var(--700);
+    }
+    &__input{
+        border:none;
+        width: 100%;
+        height: 100%;
+        padding: 0 0.5rem;
+    }
+    
+    &__error{
+        display: none;
+        color: var(--red);
+    }
+    &__typeForm{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        width: 100%;
+        gap: 0.5rem;
+    }
+    &__typeInfo{
+        color:var(--text-label);
+    }
+    &__typeDiv{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+        gap: 1rem;
+        padding: 1rem;
+        font-size: 1.1rem;
+        font-weight: var(--700);
+        width: 100%;
+        border: rem(1.5) solid var(--clearBtn);
+        border-radius: 0.5rem;
+    }
+    &__typeLabel{
+        width: 100%;
+        height: 100%;
+    }
+    &__calculateBtn{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--lime);
+        border: none;
+        padding: 1rem;
+        border-radius: 2rem;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+
+
+
+
+}

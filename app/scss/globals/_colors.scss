@@ -1,7 +1,7 @@
 :root{
     // Prime colors!
     --lime:hsl(61, 70%, 52%);
-    --lime-opacity:hsla(61, 70%, 52%, 0.5);
+    --lime-opacity:hsla(61, 70%, 52%, 0.7);
     --red:hsl(4, 69%, 50%);
     // Neutral colors!
     --white:hsl(0, 0%, 100%);
@@ -10,7 +10,4 @@
     --clearBtn:hsl(200, 26%, 54%);
     --text-label:hsl(200, 24%, 40%);
     --text-color:hsl(202, 55%, 16%);
-}
-body{
-    background-color: var(--text-label);
 }

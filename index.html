@@ -17,41 +17,49 @@
 <body>
 <main class="wrapper">
   
-    <section class="informations">
-      <h1 class="information__title">Mortgage Calculator</h1>
-      <button class="information__clearBtn" id="clearBtn">Clear All</button>
-      <label for="amountValue" class="mortgage__amountlabel">Mortgage Amount
-        <div class="mortgage__amount">
-          <span class="mortgage__moneyIcon">£</span>
-          <input type="number" class="mortgage__amountInput" id="amountValue">
+    <section class="information">
+      <div class="information__head">
+        <h1 class="information__title">Mortgage Calculator</h1>
+        <button class="information__clearBtn" id="clearBtn">Clear All</button>
+      </div>
+      <div class="mortgage">
+      <label for="amountValue" class="mortgage__label">Mortgage Amount
+        <div class="mortgage__div" id="amountError-div">
+          <span class="mortgage__icon">£</span>
+          <input type="number" class="mortgage__input" id="amountValue">
         </div>
+        <p class="mortgage__error" id="amountError">This field is required</p>
       </label>
-      <label for="termValue" class="mortgage__termLabel">Mortgage Term
-        <div class="mortgage_term">
-          <input type="number" class="mortgage__termInput" id="termValue">
-          <span class="mortgage__yearsIcon">years</span>
-        </div>
-      </label>
-      <label for="ratevalue" class="mortgage__reteLabel">Interest Rate
-        <div class="mortgage__rate">
-          <input type="number" class="mortgage__rateInput" id="rateValue">
-          <span class="mortgage__termIcon">%</span>
-        </div>
-      </label>
-      <form class="mortgage__typeForm">
-        <p class="mortgage__typeLabel">Mortgage Type</p>
-        <div class="mortgage__repayment">
-          <input type="radio" class="mortgage__repaymentInput" id="repaymentValue">
-          <label for="repaymentValue" class="mortgage__repaymentLabel">Repayment</label>
-        </div>
-        <div class="mortgage__interest">
-          <input type="radio" class="mortgage__interestInput" id="interestValue">
-          <label for="interestValue" class="mortgage__interestLabel">Interest Only</label>
-        </div>
-      </form>
-      <button type="button" class="information__calculateBtn" id="calculateBtn">
-        <img src="/assets/images/icon-calculator.svg" alt="calculator" class="information__buttonImage">
-        Calculate Repayments</button>
+        <label for="termValue" class="mortgage__label">Mortgage Term
+          <div class="mortgage__div" id="termError-div">
+            <input type="number" class="mortgage__input" id="termValue">
+            <span class="mortgage__icon">years</span>
+          </div>
+          <p class="mortgage__error" id="termError">This field is required</p>
+        </label>
+        <label for="ratevalue" class="mortgage__label">Interest Rate
+          <div class="mortgage__div" id="rateError-div">
+            <input type="number" class="mortgage__input" id="rateValue">
+            <span class="mortgage__icon">%</span>
+          </div>
+          <p class="mortgage__error" id="rateError">This field is required</p>
+        </label>
+        <form class="mortgage__typeForm">
+          <p class="mortgage__typeInfo">Mortgage Type</p>
+          <div class="mortgage__typeDiv">
+            <input type="radio" class="mortgage__repaymentInput" id="repaymentValue" value="1" name="type">
+            <label for="repaymentValue" class="mortgage__typeLabel">Repayment</label>
+          </div>
+          <div class="mortgage__typeDiv">
+            <input type="radio" class="mortgage__interestInput" id="interestValue" value="2" name="type">
+            <label for="interestValue" class="mortgage__typeLabel">Interest Only</label>
+          </div>
+          <p class="mortgage__error" id="typeError">This field is required</p>
+        </form>
+        <button type="button" class="mortgage__calculateBtn" id="calculateBtn">
+          <img src="/assets/images/icon-calculator.svg" alt="calculator" class="information__buttonImage">
+          Calculate Repayments</button>
+      </div>
     </section>
     <!-- Empty results start -->
   
