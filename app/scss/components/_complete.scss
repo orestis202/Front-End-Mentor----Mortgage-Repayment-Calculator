@@ -1,0 +1,47 @@
+@use 'util' as *;
+.complete{
+    background-color: var(--text-color);
+    color:var(--white);
+    display: none;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    @include breakpoint(medium){
+        border-bottom-left-radius: 5rem ;
+    }
+    &__comment{
+        color: var(--border);
+    }
+    &__result{
+        background-color: var(--result);
+        border-top: rem(2) solid var(--lime);
+        width: 100%;
+        border-radius: 0.5rem;
+        padding: 1rem;
+    }
+    &__repayments{
+        padding-bottom: 1rem;
+    }
+    &__label{
+        color: var(--border);
+    }
+    &__amount{
+        font-size: rem(32);
+        font-weight: var(--700);
+        color: var(--lime);
+    }
+    hr{
+        opacity: 0.3;
+    }
+    &__total{
+        padding: 1rem 0;
+    }
+    &__totalAmount{
+        font-size: rem(23);
+        font-weight: var(--700);
+    }
+}

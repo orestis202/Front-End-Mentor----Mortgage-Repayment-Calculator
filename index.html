@@ -24,27 +24,29 @@
       </div>
       <div class="mortgage">
       <label for="amountValue" class="mortgage__label">Mortgage Amount
-        <div class="mortgage__div" id="amountError-div">
+        <div class="mortgage__div" >
           <span class="mortgage__icon">£</span>
           <input type="number" class="mortgage__input" id="amountValue">
         </div>
-        <p class="mortgage__error" id="amountError">This field is required</p>
+        <p class="mortgage__error" >This field is required</p>
       </label>
-        <label for="termValue" class="mortgage__label">Mortgage Term
-          <div class="mortgage__div" id="termError-div">
-            <input type="number" class="mortgage__input" id="termValue">
-            <span class="mortgage__icon">years</span>
-          </div>
-          <p class="mortgage__error" id="termError">This field is required</p>
-        </label>
-        <label for="ratevalue" class="mortgage__label">Interest Rate
-          <div class="mortgage__div" id="rateError-div">
-            <input type="number" class="mortgage__input" id="rateValue">
-            <span class="mortgage__icon">%</span>
-          </div>
-          <p class="mortgage__error" id="rateError">This field is required</p>
-        </label>
-        <form class="mortgage__typeForm">
+        <div class="information__wrapper">
+          <label for="termValue" class="mortgage__label">Mortgage Term
+            <div class="mortgage__div" >
+              <input type="number" class="mortgage__input" id="termValue">
+              <span class="mortgage__icon">years</span>
+            </div>
+            <p class="mortgage__error" >This field is required</p>
+          </label>
+          <label for="ratevalue" class="mortgage__label">Interest Rate
+            <div class="mortgage__div">
+              <input type="number" class="mortgage__input" id="rateValue">
+              <span class="mortgage__icon">%</span>
+            </div>
+            <p class="mortgage__error">This field is required</p>
+          </label>
+        </div>
+        <form class="mortgage__typeForm" id="typeForm">
           <p class="mortgage__typeInfo">Mortgage Type</p>
           <div class="mortgage__typeDiv">
             <input type="radio" class="mortgage__repaymentInput" id="repaymentValue" value="1" name="type">
@@ -54,7 +56,7 @@
             <input type="radio" class="mortgage__interestInput" id="interestValue" value="2" name="type">
             <label for="interestValue" class="mortgage__typeLabel">Interest Only</label>
           </div>
-          <p class="mortgage__error" id="typeError">This field is required</p>
+          <p class="mortgage__error">This field is required</p>
         </form>
         <button type="button" class="mortgage__calculateBtn" id="calculateBtn">
           <img src="/assets/images/icon-calculator.svg" alt="calculator" class="information__buttonImage">
@@ -76,7 +78,7 @@
   
     <!-- Completed results start -->
   
-    <section class="complete" style="display: none;">
+    <section class="complete">
       <h1 class="complete__title">Your results</h1>
       <p class="complete__comment">
         Your results are shown below based on the information you provided.
@@ -84,17 +86,21 @@
       </p>
       <div class="complete__result">
         <div class="complete__repayments">
-          <p class="complete__repaymentLabel">Your monthly repayments</p>
-          <p class="complete__interestLabel" style="display: none;">Your total interest amount</p>
-          <span class="complete__repaymentsAmount">£1,797.74</span>
+          <p class="complete__label" id="repayment">Your monthly repayments</p>
+          <p class="complete__label"  id="interest">Your total interest amount</p>
+          <span class="complete__amount"></span>
         </div>
+        <hr>
         <div class="complete__total">
-          <p class="complete__totalLabel">Total you'll repay over the term</p>
-          <span class="complete__totalAmount">£539,322.94</span>
+          <p class="complete__label">Total you'll repay over the term</p>
+          <span class="complete__totalAmount"></span>
         </div>
       </div>
     </section>
     <!-- Completed results end -->
 </main>
+<!--Javascript-->
+<script src="/dist/script.js"></script>
 </body>
+
 </html>

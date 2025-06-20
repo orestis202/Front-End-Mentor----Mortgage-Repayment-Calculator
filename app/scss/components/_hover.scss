@@ -4,11 +4,12 @@
     cursor: pointer;
 }
 .mortgage__div:hover ,.mortgage__div:focus-within{
-  border-color: var(--text-color);
+  border: rem(2) solid var(--text-color);
 }
  
 .mortgage__typeDiv:hover,.mortgage__typeDiv:focus-within {
-  border-color: var(--lime); /* Or any highlight color */
+  border: rem(2) solid var(--lime); 
+  background-color: var(--lime-opacity);
 }
 .mortgage__calculateBtn:is(:hover,:focus){
     background-color: var(--lime-opacity);

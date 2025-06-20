@@ -1,0 +1,25 @@
+@use 'util' as *;
+.empty{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--text-color);
+    color: var(--white);
+    gap: 1rem;
+    padding: 1.5rem;
+    width: 100%;
+    height: 100%;
+    @include breakpoint(medium){
+        border-bottom-left-radius: 5rem;
+    }
+    &__title{
+        width: 100%;
+        text-align: center;
+    }
+    &__hint{
+        width: 100%;
+        text-align: center;
+        color: var(--border);
+    }
+}
